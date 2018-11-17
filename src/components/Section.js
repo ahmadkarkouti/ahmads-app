@@ -4,7 +4,7 @@ import Wave from './Wave'
 
 const SectionGroup = styled.div`
     background: url(${props => props.image});
-    height:  720px;
+    height:  1000px;
     background-size: cover;
     display: grid;
     grid-template-rows: 300px auto;
@@ -18,14 +18,14 @@ const SectionGroup = styled.div`
 `
 const SectionLogo = styled.img`
     align-self: end;
-    width: 128px;
+    width: 72px;
     margin: 0 auto;
 `
 
 const SectionTitleGroup = styled.div`
-    display: grid;
+    align-self: end;
     grid-template-columns: 300px auto;
-    margin: 0 40px;
+    margin: 0 auto;
     grid-gap: 20px;
     grid-template-rows: auto 100%;
 
@@ -35,9 +35,10 @@ const SectionTitleGroup = styled.div`
 `
 
 const SectionTitle = styled.h3`
+    align-self: end;
     color: white;
     font-size: 60px;
-    margin: 0;
+    margin: 0 auto;
     line-height: 1.2;
 
     @media (max-width: 720px) {
@@ -66,11 +67,29 @@ const Section = props => (
     <SectionGroup image={props.image}>
         <WaveTop><Wave /></WaveTop>
         <WaveBottom><Wave /></WaveBottom>
-        <SectionLogo src={props.logo}/>
-        <SectionTitleGroup>
+        <div className="Contact"/>
+        <SectionTitle>Contact Details</SectionTitle>
+        <SectionLogo src={require('../images/logo-gmail.png')}/>
+        <SectionLogo src={require('../images/logo-linkedin.png')}/>
+        <SectionLogo src={require('../images/logo-github.png')}/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        {/* <SectionTitleGroup>
             <SectionTitle>{props.title}</SectionTitle>
             <SectionText>{props.text}</SectionText>
-        </SectionTitleGroup>
+        </SectionTitleGroup> */}
     </SectionGroup>
 )
 
