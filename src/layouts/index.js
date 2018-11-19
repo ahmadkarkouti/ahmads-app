@@ -14,7 +14,7 @@ const Layout = ({ children, data }) => (
       { name: 'description', content: 'Sample'},
       { name: 'keywords', content: 'sample, something'},
     ]}
-    />
+    ><link rel="icon" type="image/gif/png" href={require('../images/logo-swift.png')}></link></Helmet>
     {/* <Header /> */}
       {children()}
   </div>
