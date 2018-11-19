@@ -39,6 +39,7 @@ class IndexPage extends Component {
 
   ChangePic() {
     alert("hello");
+    document.getElementById('myImage').src = require('../images/uwl2.png')
     if (document.getElementById('myImage').src == require('../images/uwl.png')) {
       document.getElementById('myImage').src = require('../images/uwl2.png')
     } else if (document.getElementById('myImage').src == require('../images/uwl2.png')) {
