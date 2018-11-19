@@ -38,6 +38,7 @@ const SectionCellGroup = styled.div`
 class IndexPage extends Component {
 
   ChangePic() {
+    alert("hello");
     if (document.getElementById('myImage').src == require('../images/uwl.png')) {
       document.getElementById('myImage').src = require('../images/uwl2.png')
     } else if (document.getElementById('myImage').src == require('../images/uwl2.png')) {
