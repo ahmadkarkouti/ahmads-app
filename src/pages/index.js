@@ -38,17 +38,42 @@ const SectionCellGroup = styled.div`
 class IndexPage extends Component {
 
   ChangePic() {
-    alert("hello");
-    document.getElementById('myImage').src = require('../images/uwl2.png')
-    if (document.getElementById('myImage').src == require('../images/uwl.png')) {
+    // document.getElementById('myImage').src = require('../images/uwl2.png')
+    // if (document.getElementById('myImage').src == require('../images/uwl.png')) {
+    //   document.getElementById('myImage').src = require('../images/uwl2.png')
+    // } else if (document.getElementById('myImage').src == require('../images/uwl2.png')) {
+    //   document.getElementById('myImage').src = require('../images/uwl3.png')
+    // } else if (document.getElementById('myImage').src == require('../images/uwl3.png')) {
+    //   document.getElementById('myImage').src = require('../images/uwl4.png')
+    // } else if (document.getElementById('myImage').src == require('../images/uwl4.png')) {
+    //   document.getElementById('myImage').src = require('../images/uwl5.png')
+    // } else if (document.getElementById('myImage').src == require('../images/uwl5.png')) {
+    //   document.getElementById('myImage').src = require('../images/uwl.png')
+    // }
+    // if (document.getElementById('secondpic').id != null) {
+    //   document.getElementById('secondpic').id = "thirdpic"
+    //   document.getElementById('myImage').src = require('../images/uwl3.png')
+    // }
+
+    // if (document.getElementById('firstpic').id != null) {
+    //   document.getElementById('firstpic').id = "secondpic"
+    //   document.getElementById('myImage').src = require('../images/uwl2.png')
+    // }
+
+    if(document.getElementById('myImage').className == "react-reveal firstImage") {
+      document.getElementById('myImage').className = "react-reveal secondImage"
       document.getElementById('myImage').src = require('../images/uwl2.png')
-    } else if (document.getElementById('myImage').src == require('../images/uwl2.png')) {
+    } else if(document.getElementById('myImage').className == "react-reveal secondImage") {
+      document.getElementById('myImage').className = "react-reveal thirdImage"
       document.getElementById('myImage').src = require('../images/uwl3.png')
-    } else if (document.getElementById('myImage').src == require('../images/uwl3.png')) {
+    } else if(document.getElementById('myImage').className == "react-reveal thirdImage") {
+      document.getElementById('myImage').className = "react-reveal fourthImage"
       document.getElementById('myImage').src = require('../images/uwl4.png')
-    } else if (document.getElementById('myImage').src == require('../images/uwl4.png')) {
+    } else if(document.getElementById('myImage').className == "react-reveal fourthImage") {
+      document.getElementById('myImage').className = "react-reveal fifthImage"
       document.getElementById('myImage').src = require('../images/uwl5.png')
-    } else if (document.getElementById('myImage').src == require('../images/uwl5.png')) {
+    } else if(document.getElementById('myImage').className == "react-reveal fifthImage") {
+      document.getElementById('myImage').className = "react-reveal firstImage"
       document.getElementById('myImage').src = require('../images/uwl.png')
     }
   }
@@ -93,7 +118,7 @@ class IndexPage extends Component {
       <div className="ProjectGroup">
         <div className="ProjectImage">
         <Zoom>
-        <img id="myImage" src={require('../images/uwl.png')} width="350" />
+        <img id="myImage" className="firstImage" src={require('../images/uwl.png')} width="350" />
         </Zoom>
         </div>
         <div className="ProjectTextGroup">
@@ -104,7 +129,7 @@ class IndexPage extends Component {
             </Roll>
           </div>
           <Flip>
-          <button onClick={() => this.ChangePic()}><img src={require('../images/back.png')} width="50" height="50"/></button>
+          <button id="firstpic" onClick={() => this.ChangePic()}><img src={require('../images/back.png')} width="50" height="50"/></button>
           </Flip>
           <div className="ProjectBody">
           <Bounce>
