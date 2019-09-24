@@ -175,6 +175,8 @@ class IndexPage extends Component {
                   text="React Native"
                   image={require("../images/wallpaper2.jpg")}
                   shuttle={true}
+                  apple={require("../images/logo-apple.png")}
+                  android={require("../images/logo-android.png")}
                   go={this.downloadIOS}
                 />
                 <Card

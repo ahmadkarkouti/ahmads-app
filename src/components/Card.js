@@ -14,7 +14,7 @@ const Card = props => (
               "itms-services://?action=download-manifest&url=https://almustachar.com/ahmad/shuttleManifest.plist")
           }
         >
-          <img src={require("../images/logo-apple.png")} />
+          <img src={props.apple} />
         </button>
         <button
           onClick={() =>
@@ -22,7 +22,7 @@ const Card = props => (
               "itms-services://?action=download-manifest&url=https://almustachar.com/ahmad/shuttleManifest.plist")
           }
         >
-          <img src={require("../images/logo-android.png")} />
+          <img src={props.android} />
           >
         </button>
       </div>
