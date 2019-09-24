@@ -88,10 +88,6 @@ class IndexPage extends Component {
 
   ChangeQuery() {}
 
-  downloadIOS = () => {
-    alert("hi");
-  };
-
   render() {
     return (
       <div>
@@ -177,7 +173,6 @@ class IndexPage extends Component {
                   shuttle={true}
                   apple={require("../images/logo-apple.png")}
                   android={require("../images/logo-android.png")}
-                  go={this.downloadIOS}
                 />
                 <Card
                   title="XPO"
