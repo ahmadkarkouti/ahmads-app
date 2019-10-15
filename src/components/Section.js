@@ -1,96 +1,110 @@
-import React from 'react'
-import styled from 'styled-components'
-import Wave from './Wave'
+import React from "react";
+import styled from "styled-components";
+import Wave from "./Wave";
 
 const SectionGroup = styled.div`
-    background: url(${props => props.image});
-    height:  1000px;
-    background-size: cover;
-    display: grid;
-    grid-template-rows: 300px auto;
-    grid-gap: 20px;
-    position: relative;
+  background: url(${props => props.image});
+  height: 1000px;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 300px auto;
+  grid-gap: 20px;
+  position: relative;
 
-    @media (max-width: 640px) {
-        height: 820px;
-    }
-
-`
+  @media (max-width: 640px) {
+    height: 820px;
+  }
+`;
 const SectionLogo = styled.img`
-    align-self: end;
-    width: 72px;
-    margin: 0 auto;
-`
+  align-self: end;
+  width: 72px;
+  margin: 0 auto;
+`;
 
 const SectionTitleGroup = styled.div`
-    align-self: end;
-    grid-template-columns: 300px auto;
-    margin: 0 auto;
-    grid-gap: 20px;
-    grid-template-rows: auto 100%;
+  align-self: end;
+  grid-template-columns: 300px auto;
+  margin: 0 auto;
+  grid-gap: 20px;
+  grid-template-rows: auto 100%;
 
-    @media (max-width: 720px) {
-        grid-template-columns: 1fr;
-    }
-`
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 const SectionTitle = styled.h3`
-    align-self: end;
-    color: white;
-    font-size: 60px;
-    margin: 0 auto;
-    line-height: 1.2;
+  align-self: end;
+  color: white;
+  font-size: 60px;
+  margin: 0 auto;
+  line-height: 1.2;
 
-    @media (max-width: 720px) {
-        font-size: 40px;
-    }
-`
+  @media (max-width: 720px) {
+    font-size: 40px;
+  }
+`;
 
 const SectionText = styled.p`
-    color: white;
-`
+  color: white;
+`;
 
 const WaveBottom = styled.div`
-    position: absolute;
-    width: 100%;
-    bottom: -6px;
-`
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+`;
 
 const WaveTop = styled.div`
-    position: absolute;
-    width: 100%;
-    top: -6px;
-    transform: rotate(180deg);
-`
+  position: absolute;
+  width: 100%;
+  top: -6px;
+  transform: rotate(180deg);
+`;
 
 const Section = props => (
-    <SectionGroup image={props.image}>
-        <WaveTop><Wave /></WaveTop>
-        <WaveBottom><Wave /></WaveBottom>
-        <div className="Contact"/>
-        <SectionTitle>Contact Details</SectionTitle>
-        <SectionLogo src={require('../images/logo-gmail.png')}/>
-        <SectionLogo src={require('../images/logo-linkedin.png')}/>
-        <SectionLogo src={require('../images/logo-github.png')}/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {/* <SectionTitleGroup>
+  <SectionGroup image={props.image}>
+    <WaveTop>
+      <Wave />
+    </WaveTop>
+    <WaveBottom>
+      <Wave />
+    </WaveBottom>
+    <div className="Contact" />
+    <SectionTitle>Contact Details</SectionTitle>
+    <SectionLogo
+      onClick={() => (window.location = "mailto:ahmad_karkouty@hotmail.com")}
+      src={require("../images/logo-gmail.png")}
+    />
+    <SectionLogo
+      onClick={() =>
+        (window.location = "https://www.linkedin.com/in/Ahmadkarkouti")
+      }
+      src={require("../images/logo-linkedin.png")}
+    />
+    <SectionLogo
+      onClick={() => (window.location = "https://github.com/iJIBNA")}
+      src={require("../images/logo-github.png")}
+    />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    {/* <SectionTitleGroup>
             <SectionTitle>{props.title}</SectionTitle>
             <SectionText>{props.text}</SectionText>
         </SectionTitleGroup> */}
-    </SectionGroup>
-)
+  </SectionGroup>
+);
 
-export default Section
+export default Section;

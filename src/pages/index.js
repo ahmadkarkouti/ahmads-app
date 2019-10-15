@@ -87,7 +87,7 @@ class IndexPage extends Component {
   }
 
   ChangeQuery() {}
-
+  npm;
   render() {
     return (
       <div>

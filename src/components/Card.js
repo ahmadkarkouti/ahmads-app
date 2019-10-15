@@ -19,7 +19,7 @@ const Card = props => (
         <button
           onClick={() =>
             (window.location.href =
-              "itms-services://?action=download-manifest&url=https://almustachar.com/ahmad/shuttleManifest.plist")
+              "https://www.almustachar.com/ahmad/shuttle.apk")
           }
         >
           <img src={props.android} />
