@@ -6,7 +6,7 @@
   "dependencies": {
     "animated-scroll-to": "^1.2.2",
     "classnames": "^2.2.6",
-    "gatsby": "^1.9.247",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "mdbreact": "^4.8.1",
